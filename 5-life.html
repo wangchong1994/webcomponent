@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./link.js" defer></script>
+</head>
+<body>
+  <link-nav></link-nav>
+  <div>测试 webcomponnet</div>
+  <div id="box"></div>
+  <script>
+    class UserCard extends HTMLElement {
+      constructor() {
+        super();
+        console.log('%c constructor =========>', 'color:#722ed1;', )
+      }
+      connectedCallback() {
+        var image = document.createElement('img');
+        image.src = 'https://semantic-ui.com/images/avatar2/large/kristy.png';
+        this.append(image);
+        console.log('%c connectedCallback被执行 =========>', 'color:#722ed1;', )
+      }
+      static get observedAttributes () { return [ 'img', 'text' ]; } 
+      attributeChangedCallback(name, oldValue, newValue) {
+        console.log('%c attributeChangedCallback被执行 =========>', 'color:#722ed1;', name, oldValue, newValue)
+      }
+      disconnectedCallback () { 
+        console.log('disconnectedCallback被执行'); 
+      } 
+    }
+    window.customElements.define('user-card', UserCard);
+    const customEle = document.createElement('user-card'); 
+    setTimeout(() => {
+      document.querySelector('#box').appendChild(customEle); 
+    }, 1000);
+    setTimeout(() => {
+      customEle.setAttribute('img', 'test')
+    }, 2000);
+    setTimeout(() => {
+      document.querySelector('#box').removeChild(customEle)
+    }, 3000);
+  </script>
+</body>
+</html>

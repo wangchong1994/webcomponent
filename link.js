@@ -8,6 +8,8 @@ templateNode.innerHTML = `
 <a href="./2-template.html">template</a>
 <a href="./3-props.html">props</a>
 <a href="./4-shadow.html">shadow</a>
+<a href="./5-life.html">life</a>
+<a href="./index.html">index</a>
 </template>
 `
 
