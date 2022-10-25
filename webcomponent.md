@@ -4,7 +4,7 @@
 
 原生的组件实现方案
 
-Web Components 是一套不同的技术，允许您创建可重用的定制元素（它们的功能封装在您的代码之外）并且在您的 web 应用中使用它们。
+Web Components 是一套创建原生组件的技术，允许您创建可重用的定制元素（它们的功能封装在您的代码之外）并且在您的 web 应用中使用它们。
 
 ```html
 <user-card image="https://semantic-ui.com/images/avatar2/large/kristy.png"
@@ -21,7 +21,11 @@ Web Components 是一套不同的技术，允许您创建可重用的定制元�
 
 ![image-20221012132826367](C:\Users\erekwang\AppData\Roaming\Typora\typora-user-images\image-20221012132826367.png)
 
-###  web-component怎么用
+在tdesign的vue组件库中也是用类似的方法实现的
+
+### tdesign是怎么实现的组件展示的功能的呢？
+
+## web-component怎么用
 
 #### 原生的用法
 
@@ -162,6 +166,8 @@ export default define({
 
 
 ### 看看优秀的使用案例
+
+#### tdesign是怎么实现的组件展示的功能的
 
 td-doc-demo是怎么实现的
 
